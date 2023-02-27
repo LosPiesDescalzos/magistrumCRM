@@ -16,7 +16,7 @@
 [dark] {
 	--var-bgcolor: rgb(52, 56, 61);
 	--var-fontcolor: white;
-	--var-bg: #fff;
+	--var-bg: white;
 	--var-ft: black;
 }
 
@@ -97,12 +97,16 @@ h1{
 	padding-left: 9px;
 	padding-bottom: 3px;
 	text-align: center;
+	background-color: rgb(227, 227, 227);
 }
 
 #signin button[type="submit"]:hover{
 	cursor: pointer;
 }
 
+#signin a {
+	text-decoration: none;
+}
 
 #signin p {
 	padding: 0 20px;
@@ -111,7 +115,6 @@ h1{
 	margin: 5px 0 0 0;
 }
 #signin p > a {
-	text-decoration: none;
 	color: var(--var-fontcolor);
 }
 #signin p > a:hover {
