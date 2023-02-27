@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css');
 
+
 *{
 	font-family: 'Open Sans', 'sans-serif', 'FontAwesome';
 }
@@ -11,6 +12,17 @@
 	--var-fontcolor: black;
 	--var-bg: rgb(52, 56, 61);
 	--var-ft: white;
+
+
+	--gradient-style: radial-gradient(
+			circle,
+			#f6ff1c,
+			#ffdc00,
+			#ffb800,
+			#ff951a
+	);
+	--gradient-size: 8px;
+	--gradient-shadow: #ffb800;
 }
 
 [dark] {
@@ -18,6 +30,17 @@
 	--var-fontcolor: white;
 	--var-bg: white;
 	--var-ft: black;
+
+	--gradient-style: radial-gradient(
+			circle,
+			#ccd325,
+			#d3d84b,
+			#dadd68,
+			#e0e183,
+			#e6e69c
+	);
+	--gradient-size: 2px;
+	--gradient-shadow: #fff;
 }
 
 body {
@@ -26,6 +49,20 @@ body {
 }
 
 
+input[type="checkbox"] {
+	-webkit-appearance: none;
+	outline: 0;
+	position: absolute;
+	z-index: 2;
+	top: 10px;
+	right: 10px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-image: var(--gradient-style);
+	box-shadow: 0 0 14px var(--gradient-size) var(--gradient-shadow);
+	cursor: pointer;
+}
 
 h1{
 
@@ -120,5 +157,7 @@ h1{
 #signin p > a:hover {
 	color: var(--var-fontcolor);
 }
+
+
 
 
