@@ -1,0 +1,61 @@
+
+:root {
+    --var-bgcolor: white;
+    --var-fontcolor: black;
+    --var-bg: rgb(52, 56, 61);
+    --var-ft: white;
+}
+
+[dark] {
+    --var-bgcolor: rgb(52, 56, 61);
+    --var-fontcolor: white;
+    --var-bg: white;
+    --var-ft: black;
+}
+
+ul {
+    list-style: none; /*убираем маркеры списка*/
+    margin: 0; /*убираем отступы*/
+    padding-left: 0; /*убираем отступы*/
+    margin-top: 0px; /*делаем отступ сверху*/
+    background:var(--var-bgcolor); /*добавляем фон всему меню*/
+    height: 50px; /*задаем высоту*/
+}
+
+a {
+    text-decoration: none; /*убираем подчеркивание текста ссылок*/
+    background: var(--var-bgcolor); /*добавляем фон к пункту меню*/
+    color: var( --var-fontcolor); /*меняем цвет ссылок*/
+    padding:0px 15px; /*добавляем отступ*/
+    line-height:50px; /*ровняем меню по вертикали*/
+    display: block;
+    -moz-transition: all 0.3s 0.01s ease; /*делаем плавный переход*/
+    -o-transition: all 0.3s 0.01s ease;
+    -webkit-transition: all 0.3s 0.01s ease;
+}
+
+a:hover {
+    background:var(--var-bgcolor);/*добавляем эффект при наведении*/
+}
+
+li {
+    float:left; /*Размещаем список горизонтально для реализации меню*/
+    position:relative; /*задаем позицию для позиционирования*/
+}
+
+/*Стили для скрытого выпадающего меню*/
+li > ul {
+    position:absolute;
+    top:53px;
+    display:none;
+}
+
+/*Делаем скрытую часть видимой*/
+li:hover > ul {
+    display:block;
+    width:250px;  /*Задаем ширину выпадающего меню*/
+}
+
+li:hover > ul > li {
+    float:none; /*Убираем горизонтальное позиционирование*/
+}
