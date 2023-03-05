@@ -13,49 +13,55 @@
     --var-ft: black;
 }
 
-ul {
-    list-style: none; /*убираем маркеры списка*/
-    margin: 0; /*убираем отступы*/
-    padding-left: 0; /*убираем отступы*/
-    margin-top: 0px; /*делаем отступ сверху*/
-    background:var(--var-bgcolor); /*добавляем фон всему меню*/
-    height: 50px; /*задаем высоту*/
+.top-menu {
+    display: flex;
+    z-index: 1000;
+    background: var(--var-bgcolor);
 }
 
-a {
-    text-decoration: none; /*убираем подчеркивание текста ссылок*/
-    background: var(--var-bgcolor); /*добавляем фон к пункту меню*/
-    color: var( --var-fontcolor); /*меняем цвет ссылок*/
-    padding:0px 15px; /*добавляем отступ*/
-    line-height:50px; /*ровняем меню по вертикали*/
+.menu-main {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.menu-main li {
+    display: inline-block; /*меню в строку*/
+    margin-right: -4.3px;
+}
+
+.menu-main a {
     display: block;
-    -moz-transition: all 0.3s 0.01s ease; /*делаем плавный переход*/
-    -o-transition: all 0.3s 0.01s ease;
-    -webkit-transition: all 0.3s 0.01s ease;
+    padding: 15px 32px; /*ширина и высота меню*/
+    color: var(--var-fontcolor);
+    text-decoration: none;
 }
 
-a:hover {
-    background:var(--var-bgcolor);/*добавляем эффект при наведении*/
+.menu-main a.current{
+    color: var(--var-ft);
+    font-weight: bold;
+    background: var(--var-bg);
 }
 
-li {
-    float:left; /*Размещаем список горизонтально для реализации меню*/
-    position:relative; /*задаем позицию для позиционирования*/
+.menu-main a:hover {
+    background: var(--var-bg);
+    color: var(--var-ft)
+
 }
 
-/*Стили для скрытого выпадающего меню*/
-li > ul {
-    position:absolute;
-    top:53px;
-    display:none;
+@media (max-width: 910px) {
+    .top-menu {
+        margin: 0;
+        position: fixed;}
+    .menu-main li {
+        display: block;
+        /*float: right;*/
+        margin-right: 0;
+    }
+    .menu-main a {display: block;}
+
 }
 
-/*Делаем скрытую часть видимой*/
-li:hover > ul {
-    display:block;
-    width:250px;  /*Задаем ширину выпадающего меню*/
-}
-
-li:hover > ul > li {
-    float:none; /*Убираем горизонтальное позиционирование*/
+.logo {
+    width: 300px;
 }
