@@ -49,19 +49,50 @@
 
 }
 
+
+
+.logo {
+    width: 300px;
+}
+
+.left {
+    width: 300px;
+    height: 100em;
+    background-color: #D0CCCB;
+    padding-top: 20px;
+    float: left;
+}
+
+
+.photo {
+    background: url(/img/mazik.jpg) no-repeat 0px;
+    background-size: auto 200px;
+    margin: auto auto;
+    border: 2px;
+    border-color: black;
+    border-style: solid;
+    height: 200px;
+    width: 200px;
+}
+
+.right {
+    height: 100em;
+    margin-right: 240px;
+    width: 100%;
+    display: block;
+}
+
 @media (max-width: 910px) {
     .top-menu {
         margin: 0;
         position: fixed;}
     .menu-main li {
         display: block;
-        /*float: right;*/
         margin-right: 0;
     }
     .menu-main a {display: block;}
 
-}
-
-.logo {
-    width: 300px;
+    .left{
+        padding-top: 250px;
+    }
 }
